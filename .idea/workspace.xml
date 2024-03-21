@@ -5,6 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e7cf216-82e1-4e86-a159-d9698816dd65" name="Changes" comment="">
+
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/SellerIdNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/SellerNameExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/SellerNameNotFoundException.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/SellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/SellerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/SellerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/SellerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/SellerService.java" afterDir="false" />
+
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/NullProductException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/ProductNotFoundException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/ProductPriceException.java" afterDir="false" />
@@ -14,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ProductService.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +42,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2dxPePOoAgUci1I2vfFlYyw8ALa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,7 +58,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "sam__branch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/A174360/myProject"
   }
@@ -75,7 +86,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-azul-21.0.1-4caba194b151-49bba082" />
+        <option value="jdk-21.0.2-azul-21.0.2-4caba194b151-38275579" />
       </set>
     </attachedChunks>
   </component>
