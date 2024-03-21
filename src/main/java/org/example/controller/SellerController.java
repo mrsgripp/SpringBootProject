@@ -30,13 +30,13 @@ public class SellerController {
     }
 
     @PostMapping("/seller")
-    public ResponseEntity<Seller> addSeller(@RequestBody Seller s) throws SellerNameExistsException {
+    public ResponseEntity<?> addSeller(@RequestBody Seller s) throws SellerNameExistsException {
         try {
             Seller seller = sellerService.saveSeller(s);
             return new ResponseEntity<>(seller, HttpStatus.CREATED);
         }
         catch (SellerNameExistsException e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("A Seller already exists with that name",HttpStatus.BAD_REQUEST);
         }
 
     }
