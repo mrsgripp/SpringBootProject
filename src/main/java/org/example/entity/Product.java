@@ -20,9 +20,9 @@ public class Product {
     public long productID;
     public float price;
     public String name;
-    @JsonIgnore
-    @JsonIgnoreProperties("sellers")
+    //@JsonIgnore
     @ManyToOne
+    @JsonIgnoreProperties("products")
+    //@JoinColumn(name="sellerid")
     public Seller seller;
-
 }
