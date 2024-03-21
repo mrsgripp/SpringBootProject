@@ -2,8 +2,10 @@ package org.example.controller;
 
 import org.apache.coyote.Response;
 import org.example.entity.Seller;
+import org.example.exception.SellerNameExistsException;
 import org.example.service.SellerService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,8 +30,14 @@ public class SellerController {
     }
 
     @PostMapping("/seller")
-    public ResponseEntity<Seller> addSeller(@RequestBody Seller s){
-        Seller seller = sellerService.saveSeller(s);
-        return new ResponseEntity<>(seller, HttpStatus.CREATED);
+    public ResponseEntity<?> addSeller(@RequestBody Seller s) throws SellerNameExistsException {
+        try {
+            Seller seller = sellerService.saveSeller(s);
+            return new ResponseEntity<>(seller, HttpStatus.CREATED);
+        }
+        catch (SellerNameExistsException e) {
+            return new ResponseEntity<>("A Seller already exists with that name",HttpStatus.BAD_REQUEST);
+        }
+
     }
 }

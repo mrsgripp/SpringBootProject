@@ -17,6 +17,7 @@ public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long sellerID;
+    @Column(unique=true)
     public String name;
     @OneToMany
     @JoinColumn(name="seller_fk")

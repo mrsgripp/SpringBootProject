@@ -19,10 +19,11 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long productID;
     public float price;
+    @Column(unique = true, nullable = false)
     public String name;
-    @JsonIgnore
-    @JsonIgnoreProperties("sellers")
+    //@JsonIgnore
     @ManyToOne
+    @JsonIgnoreProperties("productList")
+    //@JoinColumn(name="sellerid")
     public Seller seller;
-
 }
