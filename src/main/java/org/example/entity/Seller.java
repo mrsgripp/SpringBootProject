@@ -20,5 +20,5 @@ public class Seller {
     public String name;
     @OneToMany
     @JoinColumn(name="seller_fk")
-    public List<Product> products;
+    public List<Product> productList;
 }

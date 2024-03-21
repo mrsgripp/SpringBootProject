@@ -22,6 +22,7 @@ public class SellerService {
     }
 
     public Seller saveSeller(Seller s){
+
         return sellerRepository.save(s);
     }
 }
