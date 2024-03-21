@@ -22,7 +22,7 @@ public class Product {
     public String name;
     //@JsonIgnore
     @ManyToOne
-    @JsonIgnoreProperties("products")
+    @JsonIgnoreProperties("productList")
     //@JoinColumn(name="sellerid")
     public Seller seller;
 }
