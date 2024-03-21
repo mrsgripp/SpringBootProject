@@ -1,10 +1,13 @@
 package org.example.service;
 
+import org.example.controller.LoggingController;
 import org.example.entity.Seller;
 import org.example.exception.SellerIdNotFoundException;
 import org.example.exception.SellerNameExistsException;
 import org.example.exception.SellerNameNotFoundException;
 import org.example.repository.SellerRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +18,7 @@ import java.util.Optional;
 public class SellerService {
 
     SellerRepository sellerRepository;
+    Logger logger = LoggerFactory.getLogger(LoggingController.class);
 
     @Autowired
     public SellerService(SellerRepository sellerRepository) {
@@ -35,6 +39,7 @@ public class SellerService {
         if (s.isPresent()) {
             return s.get();
         }
+        logger.warn("Seller id " + sellerId + " not found.");
         throw new SellerIdNotFoundException("Seller id " + sellerId + " not found.");
 
     }
@@ -51,6 +56,7 @@ public class SellerService {
         if (!(sellerNameExists(s.getName()))) {
             return sellerRepository.save(s);
         } else {
+            logger.warn("The seller name already exists");
             throw new SellerNameExistsException("The seller name already exists");
         }
     }
